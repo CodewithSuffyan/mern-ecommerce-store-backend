@@ -39,6 +39,10 @@ app.use("/api/categories", categoryRoutes);
 //   });
 // }
 
+app.get("/", (req, res) => {
+  res.send(`Server is running in ${process.env.NODE_ENV} mode`);
+});
+
 app.listen(PORT, () => {
   console.log("Server is running on http://localhost:" + PORT);
   connectDB();
