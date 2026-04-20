@@ -17,14 +17,14 @@ import { connectDB } from "./lib/db.js";
 dotenv.config({ path: "./.env" });
 
 const app = express();
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 5000;
 
 // CORS configuration
 const corsOptions = {
   origin: [
     "https://mern-ecommerce-store-frontend-five.vercel.app",
     "http://localhost:5173", // For local development
-    "http://localhost:3000", // Alternative local port
+    "http://localhost:5000", // Alternative local port
   ],
   credentials: true, // Allow cookies to be sent
   optionsSuccessStatus: 200,
